@@ -1,0 +1,16 @@
+<h2>Appointment <%= @appointment.id %></h2>
+<br>
+<%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %><br>
+<%= link_to @appointment.patient.name, patient_path(@appointment.patient) %><br>
+at: <%= @appointment.appointment_datetime.strftime("%B %d, %Y at %k:%M") %>
+
+
+
+
+
+# expect(page).to have_link("Hawkeye Pierce", href: doctor_path(@hawkeye))
+# expect(page).to have_link("Homer Simpson", href: patient_path(@homer))
+# expect(page).to have_text('March 15, 2016')
+# expect(page).to have_text('18:00')
+# Create an Appointment#show page that shows the date, time, patient, and doctor for that particular appointment. 
+# Note that there should NOT be an Appointment#index page –– we don't want to have all of the appointments on display for anyone to see.
